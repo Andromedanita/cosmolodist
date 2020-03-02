@@ -1,6 +1,5 @@
 import numpy as np
-import scipy as sp
-#from scipy import integrate
+from scipy import integrate
 
 def DH(h):
     '''
@@ -22,8 +21,7 @@ def Dc(Omegam, Omegal, Omegak, h, z):
     def integrand(Omegam, Omegal, Omegak, z):
         return 1./E(Omegam, Omegal, Omegak, z)
 
-    intg, err = sp.integrate.quad(integrand, 0, z, args=(Omegam, Omegal, Omegak))
-    #intg, err = integrate.quad(integrand, 0, z, args=(Omegam, Omegal, Omegak))
+    intg, err = integrate.quad(integrand, 0, z, args=(Omegam, Omegal, Omegak))
     return DH(h) * intg
 
 
