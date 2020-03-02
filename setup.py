@@ -6,5 +6,7 @@ setuptools.setup(
     author="Anita Bahmanyar",
     author_email="bahmanyar@astro.utoronto.ca",
     description="A package to calculate cosmology distances for different cosmologies",
-    packages=["cosmolodist"]
+    url='https://github.com/Andromedanita/cosmolodist'
+    #packages=['cosmolodist'],
+    #install_requires=['numpy>=1.7','scipy','matplotlib','setuptools']
 )
